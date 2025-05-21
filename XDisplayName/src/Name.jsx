@@ -12,9 +12,14 @@ let FullName=()=>{
 return(
     <div>
         <h1>Full Name Display</h1>
-        <p>First Name: <input value={firstName} onChange={(e)=>setFirstName(e.target.value)}/></p>
-        <p>Last Name: <input value={lastName} onChange={(e)=>setLastName(e.target.value)}/></p>
-        <button onClick={handleSubmit}>Submit</button>
+
+        <form onSubmit={handleSubmit}>
+
+        <p>First Name: <input value={firstName} onChange={(e)=>setFirstName(e.target.value)} required/></p>
+        <p>Last Name: <input value={lastName} onChange={(e)=>setLastName(e.target.value)} required/></p>
+
+        <button type="submit">Submit</button>
+        </form>
         {fullName && <p>{fullName}</p>}
     </div>
 )
