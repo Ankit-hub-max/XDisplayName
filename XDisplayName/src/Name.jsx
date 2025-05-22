@@ -6,6 +6,7 @@ let FullName=()=>{
     const [fullName,setFullName]=useState('');
 
     const handleSubmit=()=>{
+        e.preventDefault();
         setFullName(`Full Name: ${firstName} ${lastName}`);
     };
 
@@ -13,7 +14,7 @@ return(
     <div>
         <h1>Full Name Display</h1>
 
-        <form onSubmit={handleSubmit}>
+        <form id="name-form" onSubmit={handleSubmit}>
 
         <p>First Name: <input type="text" value={firstName} onChange={(e)=>setFirstName(e.target.value)} required/></p>
         <p>Last Name: <input type="text" value={lastName} onChange={(e)=>setLastName(e.target.value)} required/></p>
