@@ -5,7 +5,7 @@ let FullName=()=>{
     const [lastName,setLastName]=useState('');
     const [fullName,setFullName]=useState('');
 
-    const handleSubmit=()=>{
+    const handleSubmit=(e)=>{
         e.preventDefault();
         setFullName(`Full Name: ${firstName} ${lastName}`);
     };
