@@ -15,8 +15,8 @@ return(
 
         <form onSubmit={handleSubmit}>
 
-        <p>First Name: <input value={firstName} onChange={(e)=>setFirstName(e.target.value)} required/></p>
-        <p>Last Name: <input value={lastName} onChange={(e)=>setLastName(e.target.value)} required/></p>
+        <p>First Name: <input type="text" value={firstName} onChange={(e)=>setFirstName(e.target.value)} required/></p>
+        <p>Last Name: <input type="text" value={lastName} onChange={(e)=>setLastName(e.target.value)} required/></p>
 
         <button type="submit">Submit</button>
         </form>
